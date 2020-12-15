@@ -1,0 +1,11 @@
+## ColorNet
+
+(Training)
+python train.py --dataset_path ../../datasets/satellite_images/ --gpus 0 1 2 3 --workers 32 --exp_dir EXP_DIR --exp_name EXP_NAME --lr 0.02 --batch_size 128 --epochs 100
+
+(Generated ColorNet prediction)
+python train.py --dataset_path ../../datasets/satellite_images/ --gpus 0 --workers 32 --exp_dir ../../experiment --exp_name test --lr 0.01 --batch_size 100 --epochs 100 --test_from EXP_DIR/FINISHED_EXP_NAME/models/color.pth.tar
+
+
+## Learn cropping
+python learn_crop.py
